@@ -1,0 +1,54 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  title  Responsive Registration Form | CodingLab 
+  link(rel='stylesheet' href='style.css')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  style
+      include ../css/Register-style.css
+.container
+  .title Registration
+  .content
+    form(action='/Register', method="post")
+      .user-details
+        .input-box
+          span.details Full Name
+           input(type="text" name="name" placeholder="Enter your name" required)
+        .input-box
+          span.details Username
+          input(type="text" name="username" placeholder="Enter your username" required)
+        .input-box
+          span.details Email
+           input(type="email" name="email" placeholder="Eneter you email" required)
+        .input-box
+          span.details Phone Number
+          input(type="text" name="number" placeholder="Enter you Number" required)
+        .input-box
+          span.details Password
+           input(type="password" name="password" placeholder="New Password" required)
+        .input-box
+          span.details Confirm Password
+          input(type="text" name="confirm" placeholder="Confirm Password" required)
+         
+      
+      //- .gender-details
+      //-   input#dot-1(type='radio' name='gender')
+      //-   input#dot-2(type='radio' name='gender')
+      //-   input#dot-3(type='radio' name='gender')
+      //-   span.gender-title Gender
+      //-   .category
+      //-     label(for='dot-1')
+      //-       span.dot.one
+      //-       span.gender Male
+      //-     label(for='dot-2')
+      //-       span.dot.two
+      //-       span.gender Female
+      //-     label(for='dot-3')
+      //-       span.dot.three
+      //-       span.gender Prefer not to say
+      .button
+        input(type='submit' value='Register' onclick="myFunction()")
+      div.login
+        a.signup(href='/login') 
+         | Already a Member? 
+         span.sign-up Login  

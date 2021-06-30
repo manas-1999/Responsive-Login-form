@@ -1,0 +1,56 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  //- link(rel='stylesheet' href='../css/style.css')
+  link(href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(href='https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap' rel='stylesheet')
+  title Responsive login form
+
+
+style
+      include ../css/style.css
+
+
+
+
+img.wave(src='wave.png' alt='wave not found')
+.container
+  .image
+    img(src='phone-personalization.svg' alt='not found')
+  .login-form-container
+    form(action='/login' method='POST')
+      img.avatar(src='https://cdn2.vectorstock.com/i/1000x1000/68/21/businessman-using-face-mask-for-covid19-character-vector-30576821.jpg' alt='')
+      h2 Login Here!
+      div.social-icons
+        div.fb-icon
+          <i class='bx bxl-facebook'></i>
+           span facebook
+        div.twittwer-icon
+          <i class='bx bxl-twitter'></i>
+           span twitter 
+      .input-div.one
+        .icon-field
+          i.bx.bxs-user
+        div
+          h5 Username
+          input.input(type='text',name="username")
+      .input-div.two
+        .icon-field
+          i.bx.bxs-lock-alt
+        div
+          h5 Password
+          input.input(type='password', name="password")
+      div.new-user      
+        input(type="checkbox" class="check" id="check")
+        label(for="check")|Remember me     
+        a(href='#') Forgot Password?
+      input.btn(type='submit' value='Login')
+      a.signup(href='/Register') 
+       | New user? 
+       span.sign-up signup
+  script
+      include ../index.js
